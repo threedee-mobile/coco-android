@@ -1,5 +1,6 @@
 package com.threedee.coco.ui.main
 
+import com.darkwater.alfred.adapter.AdapterViewModel
 import com.darkwater.alfred.adapter.common.text.TextViewModel
 import com.darkwater.alfred.extensions.letAll
 import com.darkwater.alfred.injection.scopes.ActivityScope
@@ -23,19 +24,27 @@ constructor(
             interactor.getData()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ items ->
-                    view.showView(
-                        listOf(
-                            TextViewModel(
-                                text = "Welcome to COCO!"
-                            )
+                .subscribe({ cells ->
+                    val viewModels: MutableList<AdapterViewModel> = mutableListOf()
+                    viewModels.add(
+                        TextViewModel(
+                            text = "${cells.size} items found for year 2018 within 200KM of Toronto"
                         )
                     )
+
+                    viewModels.addAll(cells.map { cell ->
+                        TextViewModel(
+                            id = cell.id.hashCode() and 0xfffffff,
+                            text = "\nLAT: ${cell.lat}\nLON: ${cell.lon}\nFF_CO2: ${cell.ff_co2}\nIB_CO2: ${cell.ib_co2}\n"
+                        )
+                    })
+
+                    view.showView(viewModels)
                 }, {
                     view.showView(
                         listOf(
                             TextViewModel(
-                                text = "Welcome to COCO!"
+                                text = "Something went wrong: ${it.localizedMessage}"
                             )
                         )
                     )

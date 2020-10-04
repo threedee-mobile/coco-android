@@ -12,6 +12,7 @@ import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
+import java.util.concurrent.TimeUnit
 
 @Module
 class NetworkModule {
@@ -20,7 +21,7 @@ class NetworkModule {
     @AppScope
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
         Retrofit.Builder()
-            .baseUrl("https://google.com/")
+            .baseUrl("https://us-central1-coco-4aff9.cloudfunctions.net/v1/")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClient)
@@ -33,7 +34,9 @@ class NetworkModule {
         interceptors.forEach {
             okHttpClient.addInterceptor(it)
         }
-        return okHttpClient.build()
+        return okHttpClient
+            .connectTimeout(30, TimeUnit.SECONDS)
+            .build()
     }
 
     @Provides
