@@ -19,7 +19,7 @@ class CocoApi(
 
     fun getData(
         @IntRange(from = 2016, to = 2018) year: Int,
-        month: String,
+        month: String? = null,
         @IntRange(from = 100, to = 2000) radius: Int,
         latitude: Float,
         longitude: Float
@@ -45,7 +45,7 @@ class CocoApi(
             @Header(ApiHeaders.CONTENT_TYPE) contentType: String = "application/json",
             @Header(ApiHeaders.USER_AGENT) userAgent: String,
             @Query(QueryParams.YEAR) year: Int,
-            @Query(QueryParams.MONTH) month: String,
+            @Query(QueryParams.MONTH) month: String?,
             @Query(QueryParams.RADIUS) radius: Int,
             @Query(QueryParams.LATITUDE) latitude: Float,
             @Query(QueryParams.LONGITUDE) longitude: Float

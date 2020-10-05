@@ -1,17 +1,18 @@
 package com.threedee.coco.ui.main
 
 import com.darkwater.alfred.viper.BaseContract
-import com.threedee.coco.service.Cell
+import com.threedee.coco.service.Data
 import io.reactivex.Single
 
 interface MainContract {
 
     interface View : BaseContract.View {
-
+        fun showLoading()
+        fun stopLoading()
     }
 
     interface Interactor : BaseContract.Interactor {
-        fun getData(): Single<List<Cell>>
+        fun getData(): Single<List<Data>>
     }
 
     interface Presenter : BaseContract.Presenter {

@@ -25,4 +25,19 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
+    <style name="BaseTextAppearance.Title">
+        <item name="android:textSize">@dimen/text_size_xlarge</item>
+        <item name="android:fontFamily">@font/raleway_bold</item>
+    </style>
+
+    <style name="BaseTextAppearance.Cell">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:fontFamily">@font/raleway_thin</item>
+    </style>
+
+    <style name="BaseTextAppearance.Month">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:fontFamily">@font/raleway_regular</item>
+    </style>
+
 </resources>

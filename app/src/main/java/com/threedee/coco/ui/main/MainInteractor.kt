@@ -1,8 +1,8 @@
 package com.threedee.coco.ui.main
 
 import com.darkwater.alfred.injection.scopes.ActivityScope
-import com.threedee.coco.service.Cell
 import com.threedee.coco.service.CocoApi
+import com.threedee.coco.service.Data
 import io.reactivex.Single
 import javax.inject.Inject
 
@@ -17,12 +17,11 @@ constructor(
         cocoApi = null
     }
 
-    override fun getData(): Single<List<Cell>> {
+    override fun getData(): Single<List<Data>> {
         cocoApi?.let { cocoApi ->
             return cocoApi.getData(
                 year = 2018,
-                month = "january",
-                radius = 200,
+                radius = 100,
                 latitude = 43.65f,
                 longitude = -79.38f
             ).map { it.data }

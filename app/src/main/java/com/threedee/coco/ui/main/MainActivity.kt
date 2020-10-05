@@ -1,6 +1,8 @@
 package com.threedee.coco.ui.main
 
 import android.os.Bundle
+import android.view.View
+import android.widget.FrameLayout
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -14,6 +16,8 @@ import javax.inject.Inject
 class MainActivity : BaseActivity(), MainContract.View {
 
     private var presenter: MainContract.Presenter? = null
+
+    private lateinit var progressLayout: FrameLayout
 
     private lateinit var recyclerView: RecyclerView
     private var adapter: ViewHolderAdapter = object : ViewHolderAdapter() {
@@ -37,6 +41,8 @@ class MainActivity : BaseActivity(), MainContract.View {
         toolbar.title = getString(R.string.app_name)
         setSupportActionBar(toolbar)
 
+        progressLayout = findViewById(R.id.progress_layout)
+
         recyclerView = findViewById(R.id.main_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -56,5 +62,13 @@ class MainActivity : BaseActivity(), MainContract.View {
 
     override fun clearView() {
         adapter.removeAllViewModels()
+    }
+
+    override fun showLoading() {
+        progressLayout.visibility = View.VISIBLE
+    }
+
+    override fun stopLoading() {
+        progressLayout.visibility = View.GONE
     }
 }

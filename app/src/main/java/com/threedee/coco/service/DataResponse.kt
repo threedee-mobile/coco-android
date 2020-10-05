@@ -4,7 +4,14 @@ import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
 data class DataResponse(
-    val data: List<Cell>,
+    val data: List<Data>,
+)
+
+@JsonClass(generateAdapter = true)
+data class Data(
+    val month: String,
+    val monthIndex: Int,
+    val cells: List<Cell>
 )
 
 @JsonClass(generateAdapter = true)
