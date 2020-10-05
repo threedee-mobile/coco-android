@@ -1,6 +1,7 @@
 package com.threedee.coco.ui.main
 
 import android.os.Bundle
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.darkwater.alfred.adapter.AdapterViewModel
@@ -31,6 +32,10 @@ class MainActivity : BaseActivity(), MainContract.View {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val toolbar: Toolbar = findViewById(R.id.main_toolbar)
+        toolbar.title = getString(R.string.app_name)
+        setSupportActionBar(toolbar)
 
         recyclerView = findViewById(R.id.main_recycler_view)
         recyclerView.layoutManager = LinearLayoutManager(this)
