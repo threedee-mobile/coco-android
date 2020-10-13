@@ -6,10 +6,10 @@ import android.widget.FrameLayout
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.darkwater.alfred.adapter.AdapterViewModel
-import com.darkwater.alfred.adapter.ViewHolderAdapter
-import com.darkwater.alfred.extensions.registerCommonViewHolders
-import com.darkwater.alfred.ui.BaseActivity
+import com.darkwater.kraken.adapter.AdapterViewModel
+import com.darkwater.kraken.adapter.ViewHolderAdapter
+import com.darkwater.kraken.extensions.registerCommonViewHolders
+import com.darkwater.kraken.ui.BaseActivity
 import com.threedee.coco.R
 import javax.inject.Inject
 

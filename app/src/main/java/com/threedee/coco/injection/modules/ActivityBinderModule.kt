@@ -1,6 +1,6 @@
 package com.threedee.coco.injection.modules
 
-import com.darkwater.alfred.injection.scopes.ActivityScope
+import com.darkwater.kraken.injection.scopes.ActivityScope
 import com.threedee.coco.ui.main.MainActivity
 import com.threedee.coco.ui.main.injection.modules.MainActivityModule
 import dagger.Module

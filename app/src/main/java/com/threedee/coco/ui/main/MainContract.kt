@@ -1,6 +1,6 @@
 package com.threedee.coco.ui.main
 
-import com.darkwater.alfred.viper.BaseContract
+import com.darkwater.kraken.viper.BaseContract
 import com.threedee.coco.service.Data
 import io.reactivex.Single
 

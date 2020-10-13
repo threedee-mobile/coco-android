@@ -1,7 +1,7 @@
 package com.threedee.coco.injection.modules
 
 import androidx.fragment.app.Fragment
-import com.darkwater.alfred.injection.scopes.FragmentScope
+import com.darkwater.kraken.injection.scopes.FragmentScope
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 

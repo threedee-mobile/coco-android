@@ -2,8 +2,8 @@ package com.threedee.coco.injection.modules
 
 import android.app.Application
 import android.content.Context
-import com.darkwater.alfred.injection.qualifiers.AppContext
-import com.darkwater.alfred.injection.scopes.AppScope
+import com.darkwater.kraken.injection.qualifiers.AppContext
+import com.darkwater.kraken.injection.scopes.AppScope
 import dagger.Module
 import dagger.Provides
 

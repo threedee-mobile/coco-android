@@ -1,7 +1,7 @@
 package com.threedee.coco.ui.main.injection.modules
 
 import android.app.Activity
-import com.darkwater.alfred.injection.scopes.ActivityScope
+import com.darkwater.kraken.injection.scopes.ActivityScope
 import com.threedee.coco.ui.main.*
 import dagger.Binds
 import dagger.Module

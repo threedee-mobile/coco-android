@@ -60,7 +60,7 @@ android {
 
 dependencies {
     // AARs
-    implementation files('libs/alfred-release-1.0.5.aar')
+    implementation files('libs/kraken_v1.1.6.aar')
 
     implementation 'androidx.activity:activity-ktx:1.1.0'
     implementation 'androidx.appcompat:appcompat:1.2.0'

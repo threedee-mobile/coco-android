@@ -1,6 +1,6 @@
 package com.threedee.coco.ui.main
 
-import com.darkwater.alfred.injection.scopes.ActivityScope
+import com.darkwater.kraken.injection.scopes.ActivityScope
 import com.threedee.coco.service.CocoApi
 import com.threedee.coco.service.Data
 import io.reactivex.Single

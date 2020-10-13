@@ -1,12 +1,12 @@
 package com.threedee.coco.ui.main
 
-import com.darkwater.alfred.adapter.AdapterViewModel
-import com.darkwater.alfred.adapter.common.text.TextViewModel
-import com.darkwater.alfred.adapter.common.text.TextViewStyle
-import com.darkwater.alfred.extensions.letAll
-import com.darkwater.alfred.injection.scopes.ActivityScope
-import com.darkwater.alfred.providers.DimensionProvider
-import com.darkwater.alfred.style.BaseStyle
+import com.darkwater.kraken.adapter.AdapterViewModel
+import com.darkwater.kraken.adapter.common.text.TextViewModel
+import com.darkwater.kraken.adapter.common.text.TextViewStyle
+import com.darkwater.kraken.extensions.letAll
+import com.darkwater.kraken.injection.scopes.ActivityScope
+import com.darkwater.kraken.providers.DimensionProvider
+import com.darkwater.kraken.style.BaseStyle
 import com.threedee.coco.R
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
